@@ -41,10 +41,10 @@ VAR
 tab1,tab2:ARRAY_OF INTEGER[n];
 n:integer;
 BEGIN
-ps :=dot_product();
+ps :=dot_product(n,tab1,tab2);
 IF (ps==0) THEN 
 write("orthogonaux")
-else("ne sont pas orthogonaux")
+else write "ne sont pas orthogonaux")
 END_IF
 END
 
