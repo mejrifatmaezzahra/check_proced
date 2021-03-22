@@ -1,0 +1,52 @@
+//1 
+PROCEDURE dot_product (N,M:integer, VAR tab1:ARRAY_OF INTEGER[N] tab2:ARRAY_OF INTEGER[M])
+VAR
+ps:=0;
+N,M,i,j,ps:integer;
+BEGIN
+FOR i FROM 0 to N
+FOR j FROM 0 to M
+ps=ps+(tab1[i]*tab1[j]);
+END_FOR
+END_FOR
+END
+
+//2
+ALGORITHM DOT 
+VAR
+tab1,tab2:ARRAY_OF INTEGER[n];
+n:integer;
+BEGIN
+IF dot_product(N,M,tab1,tab2)==0 THEN
+write("orthogonaux")
+else("ne sont pas orthogonaux")
+END_IF
+END 
+
+//3
+FUNCTION DOT_product(N,M:integer, VAR tab1:ARRAY_OF INTEGER[N] tab2:ARRAY_OF INTEGER[M]): INTEGER;
+VAR
+N,M,i,j,ps:integer;
+BEGIN
+FOR i FROM 0 to N
+FOR j FROM 0 to M
+ps=ps+(tab1[i]*tab1[j]);
+END_FOR
+END_FOR
+return ps;
+END
+
+ALGORITHM DOT 
+VAR
+tab1,tab2:ARRAY_OF INTEGER[n];
+n:integer;
+BEGIN
+ps :=dot_product();
+IF (ps==0) THEN 
+write("orthogonaux")
+else("ne sont pas orthogonaux")
+END_IF
+END
+
+
+
